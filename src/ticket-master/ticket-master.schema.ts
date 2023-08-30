@@ -16,9 +16,6 @@ export class TicketMaster {
 
   @Prop()
   startTime: string;
-
-  @Prop()
-  status: string;
 }
 
 export const TicketMasterSchema = SchemaFactory.createForClass(TicketMaster);

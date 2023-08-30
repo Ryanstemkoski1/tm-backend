@@ -1,33 +1,22 @@
 import { Exclude, Expose } from 'class-transformer';
-
+import { Types } from 'mongoose';
 export class TicketMasterEntity {
-  @Exclude()
-  id: string;
+  @Expose()
+  get id(): string {
+    return this._id.toString();
+  }
 
   name: string;
 
   url: string;
 
-  @Expose()
-  get startTime(): string {
-    return this.dates.start.dateTime;
-  }
-
-  status: string;
-
-  @Expose()
-  get eventId(): string {
-    return this.id;
-  }
+  startTime: string;
 
   @Exclude()
-  dates: {
-    start: {
-      localDate: string;
-      localTime: string;
-      dateTime: string;
-    };
-  };
+  _id: Types.ObjectId;
+
+  @Exclude()
+  __v: number;
 
   constructor(partial: Partial<TicketMasterEntity>) {
     Object.assign(this, partial);
