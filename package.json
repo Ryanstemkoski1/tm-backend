@@ -22,6 +22,7 @@
   "dependencies": {
     "@aws-sdk/client-s3": "^3.397.0",
     "@nestjs-modules/mailer": "^1.9.1",
+    "@nestjs/axios": "^3.0.0",
     "@nestjs/common": "^10.0.0",
     "@nestjs/config": "^3.0.0",
     "@nestjs/core": "^10.0.0",
@@ -29,7 +30,9 @@
     "@nestjs/mapped-types": "*",
     "@nestjs/mongoose": "^10.0.1",
     "@nestjs/platform-express": "^10.0.0",
+    "@nestjs/schedule": "^3.0.3",
     "@nestjs/swagger": "^7.1.8",
+    "axios": "^1.5.0",
     "bcrypt": "^5.1.1",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.0",
